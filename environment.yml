@@ -1,0 +1,19 @@
+name: quantum
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - numpy
+  - matplotlib
+  - scipy
+  - jupyter
+  - pip
+  - pip:
+    - qiskit
+    - pennylane
+    - cirq
+    - pylatexenc
+    - ipywidgets
+    - networkx
+    - seaborn 

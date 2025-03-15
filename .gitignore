@@ -1,0 +1,27 @@
+# Python 字节码文件
+__pycache__/
+*.py[cod]
+*$py.class
+
+# 发行版/打包
+dist/
+build/
+*.egg-info/
+
+# 虚拟环境
+venv/
+env/
+ENV/
+
+# IDE配置
+.idea/
+.vscode/
+*.swp
+*.swo
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# 操作系统文件
+.DS_Store
+Thumbs.db 
