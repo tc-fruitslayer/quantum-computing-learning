@@ -1,114 +1,118 @@
-# 量子计算学习框架
+# 量子计算学习资源库
 
-这个仓库包含量子计算学习的代码和教程，覆盖了多种量子计算框架和应用。
+这个仓库包含了一系列用于学习量子计算的实践代码和教程，涵盖了主流量子计算框架：PennyLane、Qiskit和Cirq。
 
-## 目录结构
+## 项目概述
+
+本项目旨在提供一个全面的量子计算学习路径，从基础概念到高级应用。每个框架的学习路径都遵循相似的进阶结构，帮助读者逐步掌握量子计算技能。
+
+## 框架介绍
+
+### PennyLane
+PennyLane是一个面向量子机器学习的开源软件框架，它提供了与多种量子硬件和经典机器学习库的无缝集成。
+
+### Qiskit
+Qiskit是IBM开发的开源量子计算框架，提供了完整的量子计算工具集，包括电路构建、模拟和在真实量子硬件上运行代码的能力。
+
+### Cirq
+Cirq是Google开发的专注于噪声中级量子(NISQ)计算的框架，它与TensorFlow Quantum紧密集成，支持量子机器学习应用。
+
+## 项目结构
 
 ```
-量子计算/
-├── README.md                 # 本文件
-├── environment.yml           # Conda环境配置文件
-└── quantum_learning/         # 量子学习资源目录
-    ├── basics/               # 量子计算基础知识
-    │   ├── 01_intro.py       # 量子计算简介
-    │   ├── 02_qubits.py      # 量子比特和叠加
-    │   ├── 03_entanglement.py # 量子纠缠
-    │   └── 04_algorithms.py  # 量子算法基础
-    ├── cirq/                 # Google Cirq框架学习
-    │   ├── README.md         # Cirq学习指南
-    │   ├── 01_cirq_basics.py # Cirq基础和特性
-    │   ├── 02_gates_and_circuits.py # 量子门和电路
-    │   ├── 03_simulation.py  # 模拟和测量
-    │   ├── 04_quantum_algorithms.py # 量子算法实现
-    │   ├── 05_tensorflow_quantum.py # TensorFlow Quantum集成
-    │   └── 06_optimization.py # 优化技术
-    ├── pennylane/            # PennyLane框架学习（待开发）
-    ├── qiskit/               # IBM Qiskit框架学习
-    │   ├── README.md         # Qiskit学习指南
-    │   ├── 01_qiskit_basics.py # Qiskit基础和特性
-    │   ├── 02_quantum_circuits.py # 量子电路创建和可视化
-    │   ├── 03_quantum_gates.py # Qiskit中的量子门
-    │   ├── 04_simulation.py  # 模拟和测量
-    │   ├── 05_quantum_algorithms.py # 经典量子算法实现
-    │   ├── 06_real_hardware.py # 在真实量子计算机上运行
-    │   ├── 07_noise_and_error.py # 量子误差纠正和降噪
-    │   └── exercises/        # 练习文件夹
-    │       ├── ex01_basics.py # 基础练习
-    │       ├── ex02_circuits.py # 电路练习
-    │       ├── ex03_algorithms.py # 算法练习
-    │       └── solutions/    # 习题解答
-    └── projects/             # 量子计算项目（待开发）
+quantum_learning/
+├── pennylane/             # PennyLane学习路径
+│   ├── 01_pennylane_basics.py
+│   ├── 02_hybrid_computing.py
+│   ├── 03_variational_circuits.py
+│   ├── 04_quantum_gradients.py
+│   ├── 05_quantum_ml.py
+│   ├── 06_advanced_applications.py
+│   ├── exercises/        # 练习和解答
+│   ├── notebooks/        # Jupyter笔记本
+│   ├── examples/         # 具体应用示例
+│   └── images/           # 生成的图像和可视化
+├── qiskit/                # Qiskit学习路径
+│   ├── 01_qiskit_basics.py
+│   ├── ...
+│   └── exercises/
+├── cirq/                  # Cirq学习路径
+│   ├── 01_cirq_basics.py
+│   ├── ...
+│   └── exercises/
+├── environment.yml        # Conda环境配置
+└── requirements.txt       # 依赖包列表
+```
+
+## 入门指南
+
+### 环境设置
+
+1. 克隆仓库：
+```bash
+git clone https://github.com/tc-fruitslayer/quantum-computing-learning.git
+cd quantum-computing-learning
+```
+
+2. 设置环境（使用Conda）：
+```bash
+conda env create -f environment.yml
+conda activate quantum-env
+```
+
+或者使用pip：
+```bash
+pip install -r requirements.txt
+```
+
+### 运行代码
+
+按照以下顺序运行脚本以获得最佳学习体验：
+
+1. 基础知识（01_*_basics.py）
+2. 电路构建和操作（02_*）
+3. 变分电路和优化（03_*）
+4. 进阶主题（04_*及以后）
+
+示例：
+```bash
+cd quantum_learning/pennylane
+python 01_pennylane_basics.py
 ```
 
 ## 学习路径
 
-1. **量子计算基础** - 从 `quantum_learning/basics/` 开始，了解量子计算的基本概念
-2. **框架学习** - 选择一个或多个框架深入学习：
-   - **Google Cirq** - Google的量子编程框架
-   - **IBM Qiskit** - IBM的量子计算生态系统
-   - **PennyLane** - 用于量子机器学习的框架（待开发）
-3. **项目实践** - 通过 `quantum_learning/projects/` 中的项目巩固所学知识（待开发）
+### 初学者路径
+1. PennyLane基础（01_pennylane_basics.py）
+2. Qiskit基础（01_qiskit_basics.py）
+3. 量子门和电路（02_*）
+4. 基本模拟（03_*）
 
-## 框架比较
+### 中级路径
+1. 变分量子电路（PennyLane: 03_variational_circuits.py）
+2. 量子梯度和优化（PennyLane: 04_quantum_gradients.py）
+3. 量子算法实现（Qiskit: 05_quantum_algorithms.py）
 
-| 框架 | 开发者 | 特点 | 适用场景 |
-|------|-------|------|---------|
-| Cirq | Google | 为NISQ设备优化，与TensorFlow集成 | 量子机器学习，NISQ算法研究 |
-| Qiskit | IBM | 完整生态系统，真实硬件访问 | 量子算法开发，教育，量子化学 |
-| PennyLane | Xanadu | 自动微分，混合量子-经典计算 | 量子机器学习，变分算法 |
+### 高级路径
+1. 量子机器学习（PennyLane: 05_quantum_ml.py）
+2. 高级应用（PennyLane: 06_advanced_applications.py）
+3. 噪声和错误缓解（Qiskit: 07_noise_and_error.py）
+4. TensorFlow Quantum（Cirq: 05_tensorflow_quantum.py）
 
-## 环境配置
+## 贡献指南
 
-使用提供的Conda环境文件创建环境：
+欢迎提交问题和改进建议！请遵循以下步骤：
+1. Fork仓库
+2. 创建您的特性分支（`git checkout -b feature/amazing-feature`）
+3. 提交您的更改（`git commit -m 'Add some amazing feature'`）
+4. 推送到分支（`git push origin feature/amazing-feature`）
+5. 打开Pull Request
 
-```bash
-conda env create -f environment.yml
-conda activate quantum-learning
-```
+## 许可证
 
-## 特色内容
+本项目采用MIT许可证 - 查看 [LICENSE](LICENSE) 文件了解详情。
 
-1. **基础教程** - 量子计算核心概念的直观解释
-2. **多框架支持** - 学习和比较不同的量子编程方法
-3. **交互式示例** - 每个示例都可以运行和修改
-4. **练习与解答** - 巩固学习的实践练习
+## 致谢
 
-### Qiskit学习特色
-
-IBM Qiskit部分现包含完整的学习路径，从基础到高级内容：
-
-- **教学文件** - 7个详细的教学文件，涵盖从基础到高级的所有主题
-- **交互式练习** - 3套练习题，帮助巩固学习内容：
-  - 基础练习：创建电路、制备量子态、测量等
-  - 电路练习：电路组合、寄存器、参数化电路等高级特性
-  - 算法练习：实现德意志-约扎、格罗弗搜索等经典量子算法
-- **详细解答** - 每个练习都有完整的参考解答
-- **实用指南** - 关于如何在真实量子计算机上运行代码的详细指导
-
-### Cirq学习特色
-
-Google Cirq部分提供了对Google量子生态系统的深入探索：
-
-- **Cirq基础** - 了解Cirq独特的设计理念和数据结构
-- **TensorFlow Quantum集成** - 探索量子-经典混合计算
-- **优化技术** - 学习如何为NISQ设备优化量子电路
-
-## 后续开发计划
-
-1. 添加PennyLane框架学习资料
-2. 开发实际项目示例
-3. 添加量子机器学习专题
-4. 扩展练习和挑战
-5. 性能比较和基准测试
-
-## 参考资源
-
-- [Qiskit文档](https://qiskit.org/documentation/)
-- [Cirq文档](https://quantumai.google/cirq)
-- [PennyLane文档](https://pennylane.ai/docs/)
-- [量子计算导论](https://quantum.country/)
-- [IBM Quantum Experience](https://quantum-computing.ibm.com/)
-
-## 贡献
-
-欢迎通过Pull Request贡献代码、修复错误或添加新教程。请确保所有代码都有详细注释和文档。 
+- 感谢[PennyLane](https://pennylane.ai/)、[Qiskit](https://qiskit.org/)和[Cirq](https://quantumai.google/cirq)团队开发这些优秀的框架
+- 特别感谢量子计算社区的所有贡献者和教育者 

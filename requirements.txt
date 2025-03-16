@@ -1,0 +1,34 @@
+# 量子计算框架
+pennylane==0.33.1
+qiskit==1.0.2
+qiskit-aer==0.13.1
+qiskit-ibm-runtime==0.17.0
+cirq==1.2.0
+tensorflow-quantum==0.7.3
+
+# 科学计算和数据处理
+numpy==1.24.3
+scipy==1.10.1
+pandas==2.0.3
+sympy==1.12
+
+# 可视化工具
+matplotlib==3.7.2
+seaborn==0.12.2
+plotly==5.15.0
+
+# 机器学习集成
+torch==2.0.1
+torchvision==0.15.2
+tensorflow==2.13.0
+scikit-learn==1.2.2
+
+# Jupyter支持
+jupyter==1.0.0
+notebook==6.5.4
+ipywidgets==8.0.7
+
+# 开发工具
+pytest==7.4.0
+black==23.7.0
+pylint==2.17.5 
