@@ -159,6 +159,8 @@ n_qubits = 4
 print("\n练习2: 量子神经网络(QNN)")
 
 if SKLEARN_AVAILABLE:
+    print("scikit-learn可用，可以完成量子神经网络分类练习")
+    # 以下代码被注释，仅供参考
     # 生成简单的二分类数据集
     # X, y = ...
     # X_train, X_test, y_train, y_test = ...
@@ -188,100 +190,6 @@ if SKLEARN_AVAILABLE:
     #     
     #     # 测量输出
     #     return qml.expval(qml.PauliZ(0))
-    
-    # 定义二分类模型
-    # def binary_classifier(inputs, weights):
-    #     """将QNN输出转换为二分类结果"""
-    #     return quantum_neural_network(inputs, weights) > 0.0
-    
-    # 定义成本函数
-    # def cost(weights, X, y):
-    #     """
-    #     计算均方误差成本
-    #     
-    #     Args:
-    #         weights: 模型权重
-    #         X: 输入特征
-    #         y: 目标标签 (0/1)
-    #         
-    #     Returns:
-    #         成本值
-    #     """
-    #     # 将标签y从{0,1}转换为{-1,1}
-    #     y_mapped = ...
-    #     
-    #     # 计算预测
-    #     predictions = ...
-    #     
-    #     # 计算均方误差
-    #     return ...
-    
-    # 训练QNN
-    # 初始化随机权重
-    # n_layers = 2
-    # weight_shape = ...
-    # weights = np.random.uniform(-np.pi, np.pi, weight_shape)
-    
-    # 使用梯度下降优化器
-    # opt = ...
-    # steps = 100
-    # batch_size = 5
-    # cost_history = []
-    
-    # for step in range(steps):
-    #     # 随机选择批次
-    #     batch_indices = ...
-    #     X_batch = X_train[batch_indices]
-    #     y_batch = y_train[batch_indices]
-    #     
-    #     # 更新权重
-    #     weights = opt.step(lambda w: cost(w, X_batch, y_batch), weights)
-    #     
-    #     # 计算全部数据的成本
-    #     current_cost = cost(weights, X_train, y_train)
-    #     cost_history.append(current_cost)
-    #     
-    #     if (step + 1) % 10 == 0:
-    #         print(f"步骤 {step+1}: 成本 = {current_cost:.6f}")
-    
-    # 评估模型性能
-    # y_pred = [binary_classifier(x, weights) for x in X_test]
-    # accuracy = accuracy_score(y_test, y_pred)
-    # print(f"测试准确率: {accuracy:.4f}")
-    
-    # 绘制决策边界
-    # plt.figure(figsize=(12, 5))
-    
-    # # 绘制训练过程
-    # plt.subplot(1, 2, 1)
-    # plt.plot(cost_history)
-    # plt.xlabel('优化步骤')
-    # plt.ylabel('成本')
-    # plt.title('QNN训练过程')
-    
-    # # 绘制决策边界
-    # plt.subplot(1, 2, 2)
-    # 
-    # # 创建网格
-    # h = 0.01
-    # x_min, x_max = X[:, 0].min() - 0.1, X[:, 0].max() + 0.1
-    # y_min, y_max = X[:, 1].min() - 0.1, X[:, 1].max() + 0.1
-    # xx, yy = np.meshgrid(np.arange(x_min, x_max, h),
-    #                      np.arange(y_min, y_max, h))
-    # 
-    # # 预测网格点
-    # Z = np.array([binary_classifier(np.array([x, y]), weights) 
-    #               for x, y in zip(xx.ravel(), yy.ravel())])
-    # Z = Z.reshape(xx.shape)
-    # 
-    # plt.contourf(xx, yy, Z, alpha=0.3)
-    # plt.scatter(X_train[:, 0], X_train[:, 1], c=y_train, edgecolors='k')
-    # plt.scatter(X_test[:, 0], X_test[:, 1], c=y_test, marker='x', s=60)
-    # plt.title(f'QNN决策边界 (准确率: {accuracy:.4f})')
-    # 
-    # plt.tight_layout()
-    # plt.savefig('qnn_classification.png')
-    # plt.close()
 else:
     print("未安装scikit-learn，跳过量子神经网络分类练习")
 
@@ -297,6 +205,8 @@ else:
 print("\n练习3: 量子核方法")
 
 if SKLEARN_AVAILABLE:
+    print("scikit-learn可用，可以完成量子核方法练习")
+    # 以下代码被注释，仅供参考
     # 创建量子设备
     # n_qubits = 2
     # dev_kernel = ...
@@ -433,7 +343,7 @@ if SKLEARN_AVAILABLE:
 else:
     print("未安装scikit-learn，跳过量子核方法练习")
 
-"""
+print("""
 练习4: 量子转移学习
 -----------------
 任务:
@@ -442,11 +352,13 @@ else:
    - 经典部分用于特征提取
    - 量子部分用于分类
 3. 比较纯经典模型和混合模型的性能
-"""
+""")
 
 print("\n练习4: 量子转移学习")
 
 if TORCH_AVAILABLE and SKLEARN_AVAILABLE:
+    print("PyTorch和scikit-learn可用，可以完成量子转移学习练习")
+    # 以下代码被注释，仅供参考
     # 创建量子设备
     # n_qubits = 2
     # dev_transfer = ...
@@ -454,184 +366,6 @@ if TORCH_AVAILABLE and SKLEARN_AVAILABLE:
     # 创建数据集
     # X, y = ...
     # X_train, X_test, y_train, y_test = ...
-    
-    # 数据预处理
-    # X_train_tensor = torch.tensor(X_train, dtype=torch.float32)
-    # y_train_tensor = torch.tensor(y_train, dtype=torch.float32).reshape(-1, 1)
-    # X_test_tensor = torch.tensor(X_test, dtype=torch.float32)
-    # y_test_tensor = torch.tensor(y_test, dtype=torch.float32).reshape(-1, 1)
-    
-    # 预训练的经典模型
-    # class ClassicalMLP(nn.Module):
-    #     def __init__(self, input_dim, hidden_dim, output_dim):
-    #         super().__init__()
-    #         self.fc1 = nn.Linear(input_dim, hidden_dim)
-    #         self.fc2 = nn.Linear(hidden_dim, output_dim)
-    #         self.relu = nn.ReLU()
-    #         
-    #     def forward(self, x):
-    #         x = self.relu(self.fc1(x))
-    #         x = self.fc2(x)
-    #         return x
-    
-    # 训练经典模型
-    # input_dim = X_train.shape[1]
-    # hidden_dim = 4
-    # output_dim = 2  # 特征提取的输出维度
-    # 
-    # classical_model = ClassicalMLP(input_dim, hidden_dim, output_dim)
-    # criterion = nn.BCEWithLogitsLoss()
-    # optimizer = optim.Adam(classical_model.parameters(), lr=0.01)
-    # 
-    # # 训练循环
-    # epochs = 50
-    # for epoch in range(epochs):
-    #     optimizer.zero_grad()
-    #     outputs = classical_model(X_train_tensor)
-    #     loss = criterion(outputs[:, 0].reshape(-1, 1), y_train_tensor)
-    #     loss.backward()
-    #     optimizer.step()
-    #     
-    #     if (epoch + 1) % 10 == 0:
-    #         print(f"预训练经典模型，Epoch {epoch+1}/{epochs}, Loss: {loss.item():.4f}")
-    
-    # 量子部分 - 将经典模型的特征用作量子电路的输入
-    # @qml.qnode(dev_transfer)
-    # def quantum_circuit(inputs, weights):
-    #     """
-    #     量子分类器电路
-    #     
-    #     Args:
-    #         inputs: 经典模型提取的特征
-    #         weights: 量子电路的权重
-    #         
-    #     Returns:
-    #         分类预测
-    #     """
-    #     # 编码经典特征
-    #     ...
-    #     
-    #     # 变分层
-    #     ...
-    #     
-    #     # 测量
-    #     return qml.expval(qml.PauliZ(0))
-    
-    # 混合量子-经典模型
-    # class HybridModel(nn.Module):
-    #     def __init__(self, classical_model, n_qubits):
-    #         super().__init__()
-    #         self.classical_model = classical_model
-    #         self.q_weights = nn.Parameter(torch.randn(n_qubits * 3))  # 量子电路参数
-    #         
-    #     def forward(self, x):
-    #         # 冻结经典模型权重
-    #         with torch.no_grad():
-    #             features = self.classical_model(x)
-    #         
-    #         # 归一化特征
-    #         features_normalized = ...
-    #         
-    #         # 使用量子电路处理特征
-    #         q_out = torch.tensor([
-    #             quantum_circuit(
-    #                 features_normalized[i].detach().numpy(), 
-    #                 self.q_weights.detach().numpy()
-    #             )
-    #             for i in range(len(features_normalized))
-    #         ], requires_grad=True)
-    #         
-    #         return q_out.reshape(-1, 1)
-    
-    # 训练混合模型
-    # hybrid_model = HybridModel(classical_model, n_qubits)
-    # 
-    # # 仅训练量子部分的参数
-    # hybrid_optimizer = optim.Adam([hybrid_model.q_weights], lr=0.1)
-    # 
-    # # 训练循环
-    # hybrid_epochs = 30
-    # hybrid_losses = []
-    # 
-    # for epoch in range(hybrid_epochs):
-    #     hybrid_optimizer.zero_grad()
-    #     
-    #     # 前向传播
-    #     hybrid_outputs = hybrid_model(X_train_tensor)
-    #     
-    #     # 将输出转换为0-1之间
-    #     hybrid_outputs = (hybrid_outputs + 1) / 2
-    #     
-    #     # 计算损失
-    #     hybrid_loss = nn.functional.binary_cross_entropy(
-    #         hybrid_outputs, 
-    #         y_train_tensor
-    #     )
-    #     
-    #     # 反向传播
-    #     hybrid_loss.backward()
-    #     hybrid_optimizer.step()
-    #     
-    #     hybrid_losses.append(hybrid_loss.item())
-    #     
-    #     if (epoch + 1) % 5 == 0:
-    #         print(f"混合模型训练，Epoch {epoch+1}/{hybrid_epochs}, Loss: {hybrid_loss.item():.4f}")
-    
-    # 评估模型
-    # with torch.no_grad():
-    #     # 评估经典模型
-    #     classical_outputs = classical_model(X_test_tensor)
-    #     classical_preds = (torch.sigmoid(classical_outputs[:, 0]) > 0.5).numpy().astype(int)
-    #     classical_accuracy = accuracy_score(y_test, classical_preds)
-    #     
-    #     # 评估混合模型
-    #     hybrid_outputs = hybrid_model(X_test_tensor)
-    #     hybrid_preds = (hybrid_outputs > 0.5).numpy().astype(int).flatten()
-    #     hybrid_accuracy = accuracy_score(y_test, hybrid_preds)
-    # 
-    # print(f"经典模型测试准确率: {classical_accuracy:.4f}")
-    # print(f"混合量子-经典模型测试准确率: {hybrid_accuracy:.4f}")
-    # 
-    # # 可视化结果
-    # plt.figure(figsize=(12, 5))
-    # 
-    # # 绘制训练损失
-    # plt.subplot(1, 2, 1)
-    # plt.plot(hybrid_losses)
-    # plt.xlabel('优化步骤')
-    # plt.ylabel('损失')
-    # plt.title('混合模型训练损失')
-    # 
-    # # 绘制决策边界比较
-    # plt.subplot(1, 2, 2)
-    # 
-    # # 创建网格
-    # h = 0.05
-    # x_min, x_max = X[:, 0].min() - 0.1, X[:, 0].max() + 0.1
-    # y_min, y_max = X[:, 1].min() - 0.1, X[:, 1].max() + 0.1
-    # xx, yy = np.meshgrid(np.arange(x_min, x_max, h),
-    #                      np.arange(y_min, y_max, h))
-    # 
-    # # 网格点张量
-    # grid_tensor = torch.tensor(
-    #     np.c_[xx.ravel(), yy.ravel()], 
-    #     dtype=torch.float32
-    # )
-    # 
-    # # 混合模型预测
-    # with torch.no_grad():
-    #     Z_hybrid = hybrid_model(grid_tensor).numpy()
-    # Z_hybrid = (Z_hybrid > 0.5).astype(int).reshape(xx.shape)
-    # 
-    # plt.contourf(xx, yy, Z_hybrid, alpha=0.3, levels=1)
-    # plt.scatter(X_test[:, 0], X_test[:, 1], c=y_test, edgecolors='k', marker='o')
-    # plt.scatter(X_test[:, 0], X_test[:, 1], 
-    #           c=hybrid_preds, alpha=0.2, marker='x', s=100)
-    # plt.title(f'混合模型决策边界 (准确率: {hybrid_accuracy:.4f})')
-    # 
-    # plt.tight_layout()
-    # plt.savefig('quantum_transfer_learning.png')
-    # plt.close()
 else:
     print("未安装PyTorch或scikit-learn，跳过量子转移学习练习")
 
