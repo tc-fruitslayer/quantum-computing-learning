@@ -454,23 +454,7 @@ def create_quantum_hamiltonian(n_qubits=2):
 - 针对量子特定应用的优化
 - 性能测试和基准比较
 
-### 扩展阅读
 
-1. Higham, N. J. (2008). *Functions of Matrices: Theory and Computation*. SIAM.
-
-2. Nielsen, M. A., & Chuang, I. L. (2010). *Quantum Computation and Quantum Information*. Cambridge University Press.
-
-3. Moler, C., & Van Loan, C. (2003). "Nineteen Dubious Ways to Compute the Exponential of a Matrix, Twenty-Five Years Later". *SIAM Review*.
-
-4. Childs, A. M. (2010). "On the relationship between continuous- and discrete-time quantum walk". *Communications in Mathematical Physics*.
-
-5. Golub, G. H., & Van Loan, C. F. (2013). *Matrix Computations*. Johns Hopkins University Press.
-
-6. Schuld, M., & Petruccione, F. (2021). *Machine Learning with Quantum Computers*. Springer.
-
-7. Zanardi, P., Campos Venuti, L., & Giorda, P. (2007). "Bures metric over thermal state manifolds and quantum criticality". *Physical Review A*.
-
-8. Berry, D. W., Childs, A. M., Cleve, R., Kothari, R., & Somma, R. D. (2015). "Simulating Hamiltonian dynamics with a truncated Taylor series". *Physical Review Letters*.11. Preskill, J. (2018). "Quantum Computing in the NISQ era and beyond". *Quantum*, 2, 79.
 ### 7. 矩阵函数在NISQ时代的应用
 
 在噪声中等规模量子（NISQ）设备时代，矩阵函数的计算和优化变得尤为重要，因为这些设备的量子比特数量有限且易受噪声影响。
@@ -538,3 +522,21 @@ NISQ设备上矩阵函数的成功应用案例：
 2. **量子化学计算**：
    - 计算小分子的基态能量
    - 模拟化学反应动力学过程
+
+### 扩展阅读
+
+1. Higham, N. J. (2008). *Functions of Matrices: Theory and Computation*. SIAM.
+
+2. Nielsen, M. A., & Chuang, I. L. (2010). *Quantum Computation and Quantum Information*. Cambridge University Press.
+
+3. Moler, C., & Van Loan, C. (2003). "Nineteen Dubious Ways to Compute the Exponential of a Matrix, Twenty-Five Years Later". *SIAM Review*.
+
+4. Childs, A. M. (2010). "On the relationship between continuous- and discrete-time quantum walk". *Communications in Mathematical Physics*.
+
+5. Golub, G. H., & Van Loan, C. F. (2013). *Matrix Computations*. Johns Hopkins University Press.
+
+6. Schuld, M., & Petruccione, F. (2021). *Machine Learning with Quantum Computers*. Springer.
+
+7. Zanardi, P., Campos Venuti, L., & Giorda, P. (2007). "Bures metric over thermal state manifolds and quantum criticality". *Physical Review A*.
+
+8. Berry, D. W., Childs, A. M., Cleve, R., Kothari, R., & Somma, R. D. (2015). "Simulating Hamiltonian dynamics with a truncated Taylor series". *Physical Review Letters*.11. Preskill, J. (2018). "Quantum Computing in the NISQ era and beyond". *Quantum*, 2, 79.
